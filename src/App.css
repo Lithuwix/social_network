@@ -1,0 +1,19 @@
+.app_wrapper {
+    display: grid;
+    grid-template-areas:
+    "h h"
+    "n c";
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 10fr;
+    /*grid-gap: 10px;*/
+    width: 1200px;
+    margin: 0 auto;
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 20px;
+}
+
+.app_wrapper_content {
+    grid-area: c;
+}
+
+

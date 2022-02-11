@@ -1,0 +1,13 @@
+.main {
+    background-color: #white;
+    height: 100vh; /* +- */
+    /*padding: 25px 0 0 20px;*/
+    color: #818181;
+}
+
+.content {
+    display: grid;
+    grid-template-areas:
+        "list chat";
+    grid-template-columns: 3fr 9fr;
+}

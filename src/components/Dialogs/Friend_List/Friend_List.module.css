@@ -1,0 +1,8 @@
+.container {
+    grid-area: list;
+}
+.dialogs {
+    text-transform: uppercase;
+    margin: 25px 0 20px 20px;
+    color: #0c7070;
+}

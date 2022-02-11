@@ -1,0 +1,14 @@
+.post {
+    margin: 0 0 80px 100px;
+    padding-top: 5px;
+    position: relative;
+} .post::before {
+    content:"";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 917px;
+    background-color: #ffff6b94;
+    border-radius: 30px;
+}

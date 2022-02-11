@@ -1,0 +1,14 @@
+.header {
+    grid-area: h;
+    background-color: #c6afe487;  /* #c6afe487 #F5AD38 #35a3c97d*/
+}
+
+
+.logo_img {
+    width: 58px;
+    height: 41px;
+    background-image: url(https://cdn.dribbble.com/users/10882/screenshots/15172621/media/cd2246d5d0f54f9a4316bd4d276764b2.png?compress=1&resize=400x300);
+    background-size: cover;
+    border-radius: 15px 69px 18px 66px;
+    margin: 9px 0 0 13px;
+}

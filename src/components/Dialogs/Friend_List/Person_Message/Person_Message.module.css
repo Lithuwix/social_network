@@ -1,0 +1,19 @@
+.person {
+    padding-bottom: 40px;
+    padding-top: 5px;
+    position: relative;
+}
+.person a {
+    text-decoration: none;
+    padding-left: 80px;
+    color: black;
+} .person:before {
+      content: "";
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 0;
+      right: 190px;
+      background-color: #efefef87;
+      border-radius: 30px;
+  }

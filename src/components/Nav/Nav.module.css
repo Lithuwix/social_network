@@ -1,0 +1,23 @@
+.item {
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+}
+.nav {
+    grid-area: n;
+    background-color: #e3e3e34d;
+    padding-top: 15px;
+    height: 100vh;
+}
+.nav div {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+.nav a {
+    color: #78468d;
+}.nav a:active {
+    color: #b66ed5;
+}
+.settings {
+    margin-top: 50px;
+}
+
