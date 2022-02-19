@@ -1,8 +1,11 @@
 import React from "react";
 import Post from "./Post/Post";
-import css from "./MyPosts.module.css";
+import css from "./My_Posts.module.css";
 
-const MyPosts = () => {
+const My_Posts = (props) => {
+
+    let posts = props.postsData.map ( el => <Post id={el.id} message={el.message} likesCount={el.likesCount}/>)
+
     return (
         <div className={css.posts}>
             My posts
@@ -12,10 +15,9 @@ const MyPosts = () => {
             <div className={css._222}>
                 send
             </div>
-            <Post message="Hey, Why nobody love me..?"/>
-            <Post message="It's my first Post"/>
+            { posts }
         </div>
     );
 }
 
-export default MyPosts;
+export default My_Posts;

@@ -7,8 +7,12 @@
     width: 40px;
     height: 40px;
     position: absolute;
-    top: 0;
+    top: 12px;
     right: 917px;
     background-color: #ffff6b94;
     border-radius: 30px;
+}
+.likes {
+    padding-top: 10px;
+    font-size: 1rem;
 }

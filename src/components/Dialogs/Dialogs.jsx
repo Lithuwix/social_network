@@ -7,8 +7,8 @@ const Dialogs = (props) => {
     return (
         <div className={css.main}>
             <div className={css.content}>
-                <Friend_List/>
-                <Active_Chat/>
+                <Friend_List friendListData={props.friendListData}/>
+                <Active_Chat activeChatData={props.chatData}/>
             </div>
         </div>
     );
