@@ -2,19 +2,35 @@
     margin: 0 20px 30px 20px;
 }
 
-
-._111 {
+.new_post_text {
+    display: block;
+    min-width: 60%;
+    max-width: 800px;
+    min-height: 80px;
+    max-height: 200px;
+    border: none;
+    border-radius: 10px;
     background-color: #817f7c23;
-    height: 80px;
     margin-top: 20px;
     padding: 10px 0 0 10px;
-    color: #50505075;
-} ._222 {
+    color: rgba(24, 23, 23, 0.46);
+    font-size: 1rem;
+} .new_post_text:focus-visible {
+      outline: none;
+  }
+
+.create_new_post_btn {
+    font-size: 1.2rem;
+    border: none;
     background-color: #1dbfac41;
     color: #5e5e5e;
-    width: 9%;
-    padding: 5px 0px 6px 36px;
-    margin: 10px 0px 50px 0px;
+    width: 12%;
+    height: 50px;
+    padding: 5px 0 6px 0;
+    margin: 10px 0 50px 0;
     border-radius: 33px 59px 9px 51px;
+
 }
+
+
 

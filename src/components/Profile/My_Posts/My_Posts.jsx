@@ -6,15 +6,22 @@ const My_Posts = (props) => {
 
     let posts = props.posts.map ( el => <Post id={el.id} message={el.message} likesCount={el.likesCount}/>)
 
+    let newPostText = React.createRef(); // ref - по сути метод react, который создает ССЫЛКУ на элемент
+
+    let addPost = () => {
+        let text = newPostText.current.value;
+        props.addPost(text);
+        newPostText.current.value = '';
+    };
+
     return (
         <div className={css.posts}>
             My posts
-            <div className={css._111}>
-                your news...
-            </div> 
-            <div className={css._222}>
+            <textarea className={css.new_post_text} ref={newPostText}>
+            </textarea>
+            <button className={css.create_new_post_btn} onClick={ addPost }>
                 send
-            </div>
+            </button>
             { posts }
         </div>
     );
