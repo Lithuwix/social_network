@@ -7,8 +7,8 @@ const Dialogs = (props) => {
     return (
         <div className={css.main}>
             <div className={css.content}>
-                <Friend_List friend_list={props.state.friend_list}/>
-                <Active_Chat messages={props.state.messages}/>
+                <Friend_List friend_list={props.dialogsPage.friend_list}/>
+                <Active_Chat messages={props.dialogsPage.messages} newMessage={props.dialogsPage.newMessage} addMessage={props.addMessage} createNewMessageInDialogs={props.createNewMessageInDialogs}/>
             </div>
         </div>
     );

@@ -8,14 +8,22 @@ const Active_Chat = (props) => {
     let newMessage = React.createRef();
     let sendMessage = () => {
         let text = newMessage.current.value;
-        alert(text)
+        props.addMessage(text);
+    //    function from state
     }
+
+    let createNewMessageInDialogs = () => {
+        let text = newMessage.current.value;
+        props.createNewMessageInDialogs(text);
+        //    function from state
+    }
+
     return (
         <div className={css.chat}>
             <div className={css.message_items}>
-                {chat}
+                { chat }
             </div>
-            <textarea className={css.message_area} ref={newMessage}></textarea>
+            <textarea className={css.message_area} ref={newMessage} onChange={ createNewMessageInDialogs } value={props.newMessage}/>
             <button className={css.send} onClick={ sendMessage }>send message</button>
         </div>
     )

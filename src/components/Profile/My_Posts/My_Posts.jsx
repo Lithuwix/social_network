@@ -8,17 +8,21 @@ const My_Posts = (props) => {
 
     let newPostText = React.createRef(); // ref - по сути метод react, который создает ССЫЛКУ на элемент
 
+    //function from STATE in props
     let addPost = () => {
+        props.addPost();
+    };
+
+    //function from STATE in props
+    let updateNewPostText = () => {
         let text = newPostText.current.value;
-        props.addPost(text);
-        newPostText.current.value = '';
+        props.updateNewPostText(text);
     };
 
     return (
         <div className={css.posts}>
             My posts
-            <textarea className={css.new_post_text} ref={newPostText}>
-            </textarea>
+            <textarea className={css.new_post_text}  onChange={ updateNewPostText } ref={newPostText} value={props.newPostText} />
             <button className={css.create_new_post_btn} onClick={ addPost }>
                 send
             </button>

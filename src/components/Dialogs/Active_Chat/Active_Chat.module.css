@@ -28,10 +28,11 @@
 .message_area {
     margin-top: 10px;
     resize: none;
-    width: 570px;
+    width: 550px;
     height: 7vh;
     border: none;
     border-radius: 15px;
+    padding: 10px;
 } .message_area:focus-visible {
     outline: none;
   }

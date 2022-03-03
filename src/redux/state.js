@@ -1,11 +1,10 @@
-import {rerenderEntireTree} from "../render";
-
 let state = {
     profilePage: {
         posts: [
             {id: 1, message: "Hey, Why nobody love me..?", likesCount: 23},
             {id: 2, message: "It's my first Post", likesCount: 0}
-        ]
+        ],
+        newPostText: 'text from state'
     },
     dialogsPage: {
         friend_list: [
@@ -21,20 +20,52 @@ let state = {
             {id: 2, message: 'How is your It KAMASUTRA?'},
             {id: 3, message: 'Yo'},
             {id: 4, message: 'Yo yo yo!!!'}
-        ]
+        ],
+        newMessage: "MESSAGE FROM STATE"
     }
 }
 
+window.state = state;
 
-export let addPost = (postMessage) => {
+let rerenderEntireTree = () => {
+    console.log('it worked!')
+}
+
+export const addPost = () => {
     let newPost = {
         id: 5,
-        message: postMessage,
+        message: state.profilePage.newPostText,
         likesCount: 0
     };
-    state.profilePage.posts.unshift(newPost);
+    state.profilePage.posts.unshift(newPost)
+    state.profilePage.newPostText = '';
     rerenderEntireTree(state);
 }
+
+export const updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+}
+
+export const addMessage = () => {
+    let newMessage = {
+        id: 5,
+        message: state.dialogsPage.newMessage
+    };
+    state.dialogsPage.messages.push(newMessage);
+    state.dialogsPage.newMessage = '';
+    rerenderEntireTree(state);
+}
+
+export const createNewMessageInDialogs = (newMessage) => {
+    state.dialogsPage.newMessage = newMessage;
+    rerenderEntireTree(state);
+}
+
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer;
+}
+
 
 
 export default state;
