@@ -1,6 +1,7 @@
 import React from "react";
 import Post from "./Post/Post";
 import css from "./My_Posts.module.css";
+import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/state";
 
 const My_Posts = (props) => {
 
@@ -8,21 +9,21 @@ const My_Posts = (props) => {
 
     let newPostText = React.createRef(); // ref - по сути метод react, который создает ССЫЛКУ на элемент
 
-    //function from STATE in props
+    //function from STORE in props
     let addPost = () => {
-        props.addPost();
+        props.dispatch( addPostActionCreator() );
     };
 
-    //function from STATE in props
-    let updateNewPostText = () => {
+    //function from STORE in props
+    let onPostChange = () => {
         let text = newPostText.current.value;
-        props.updateNewPostText(text);
+        props.dispatch( updateNewPostTextActionCreator(text) );
     };
 
     return (
         <div className={css.posts}>
             My posts
-            <textarea className={css.new_post_text}  onChange={ updateNewPostText } ref={newPostText} value={props.newPostText} />
+            <textarea className={css.new_post_text}  onChange={ onPostChange } ref={newPostText} value={props.newPostText} />
             <button className={css.create_new_post_btn} onClick={ addPost }>
                 send
             </button>
