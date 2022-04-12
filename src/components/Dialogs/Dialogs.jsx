@@ -8,7 +8,7 @@ const Dialogs = (props) => {
         <div className={css.main}>
             <div className={css.content}>
                 <Friend_List friend_list={props.dialogsPage.friend_list}/>
-                <Active_Chat messages={props.dialogsPage.messages} newMessage={props.dialogsPage.newMessage} dispatch={props.dispatch}/>
+                <Active_Chat messages={props.dialogsPage.messages} newMessageText={props.dialogsPage.newMessageText} dispatch={props.dispatch}/>
             </div>
         </div>
     );
